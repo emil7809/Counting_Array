@@ -1,13 +1,15 @@
 "use strict";
 
-const max;
-let iterator;
+const max = 10;
+let iterator = 0;
 
-init();
+loop();
 
-function init(){
+function loop(){
+    iterator++;
 
-    loop();
+    if (iterator <= max) {
+        console.log(iterator);
+        setTimeout(loop, 300);
+    }
 }
-
-function loop(){}
